@@ -23,9 +23,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.s1121133.ui.theme.S1121133Theme
 import androidx.compose.ui.platform.LocalContext
 import android.app.Activity
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.geometry.Offset
-
-
+import androidx.compose.ui.unit.dp
 
 
 class MainActivity : ComponentActivity() {
@@ -52,23 +55,21 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column (
+    Column(
         modifier = modifier
-        .background(Color(0xff95fe95))
-        .fillMaxSize(),
+            .background(Color(0xff95fe95))
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
 
-
-    ){
-
-            Text(
-                text = "2024期末上機考(資管二A許閔慈)",
-                modifier = modifier
-            )
-            Image(
-                painter = painterResource(id = R.drawable.class_a),
-                contentDescription = "圖片",
-            )
+        Text(
+            text = "2024期末上機考(資管二A許閔慈)",
+            modifier = modifier
+        )
+        Image(
+            painter = painterResource(id = R.drawable.class_a),
+            contentDescription = "圖片",
+        )
         Text(
             text = "遊戲持續時間 0 秒",
             modifier = modifier
@@ -80,9 +81,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         )
 
         val activity = (LocalContext.current as? Activity)
-        Box (
+        Box(
             contentAlignment = Alignment.BottomEnd
-        ){
+        ) {
             Button(
                 onClick = {
                     activity?.finish()
@@ -91,10 +92,24 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 Text("結束App")
             }
         }
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.maria2),
+                contentDescription = "圖示",
+                modifier = Modifier
+                    .size(200.dp)
+            )
+        }
 
     }
 
-    }
+
+
+}
+
 
 
 
