@@ -52,8 +52,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column (Modifier.background(Color(0xff95fe95)).fillMaxSize()){
-        Alignment.CenterHorizontally
+    Column (
+        modifier = modifier
+        .background(Color(0xff95fe95))
+        .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+
+
+    ){
+
             Text(
                 text = "2024期末上機考(資管二A許閔慈)",
                 modifier = modifier
@@ -63,7 +70,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 contentDescription = "圖片",
             )
         Text(
-            text = "2024期末上機考(資管二A許閔慈)",
+            text = "遊戲持續時間 0 秒",
             modifier = modifier
         )
 
@@ -85,10 +92,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             }
         }
 
-
     }
 
     }
+
+
 
 
 
