@@ -50,9 +50,6 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
-
-
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column(
@@ -108,18 +105,4 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 
 
-}
-
-
-
-
-
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    S1121133Theme {
-        Greeting("Android")
-    }
 }
