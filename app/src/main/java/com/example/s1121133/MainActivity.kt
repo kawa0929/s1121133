@@ -1,5 +1,6 @@
 package com.example.s1121133
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,6 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             S1121133Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
