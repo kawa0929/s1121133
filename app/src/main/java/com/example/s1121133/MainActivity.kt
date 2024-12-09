@@ -23,6 +23,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.s1121133.ui.theme.S1121133Theme
 import androidx.compose.ui.platform.LocalContext
 import android.app.Activity
+import androidx.compose.ui.geometry.Offset
+
 
 
 
@@ -50,7 +52,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column (Modifier.background(Color(0xff95fe95))){
+    Column (Modifier.background(Color(0xff95fe95)).fillMaxSize()){
         Alignment.CenterHorizontally
             Text(
                 text = "2024期末上機考(資管二A許閔慈)",
@@ -87,6 +89,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     }
 
     }
+
 
 
 
